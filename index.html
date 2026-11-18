@@ -1,0 +1,35 @@
+<!--
+@author Jannchie
+@email jannchie@gmail.com
+@create date 2018-07-18 08:42:38
+@modify date 2019-03-20 15:17:15
+@desc A data visualization project based on d3.js. 
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="vendor/d3.min.js"></script>
+    <script src="vendor/xlsx.full.min.js"></script>
+    <title>动态排名数据可视化 ver1.6 By Jannchie</title>
+</head>
+
+<body>
+
+    <header class="import">
+        <label for="inputfile">选择表格</label>
+        <input type="file" id="inputfile" accept=".csv,.xlsx,.xls">
+        <label for="worksheet" id="worksheet-label" hidden>工作表</label>
+        <select id="worksheet" aria-labelledby="worksheet-label" hidden></select>
+        <span id="status" role="status">请选择 CSV 或 Excel，表头需包含 name、type、value、date。</span>
+    </header>
+    <svg width="1900" height="1060" viewBox="0 0 1900 1060" aria-label="动态排名图"></svg>
+    <script src="config.js"></script>
+    <script src="visual.js"></script>
+    <script src="import.js"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+</body>
+
+</html>
